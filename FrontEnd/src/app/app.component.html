@@ -1,0 +1,105 @@
+<div class='container'>
+	<div class='row'>
+		<div class='col-lg' style='text-align:center'>
+			<div *ngFor="let unit of data">
+				<p style='font-size: 27px'><b><u><i>{{unit.Unit}}</i></u></b></p>
+				<img src="assets/img/{{unit.Unit}}.png">
+				<br>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg">
+							<p style='font-size: 27px'><b><i><u>Costo:</u></i> {{unit.Cost}}</b></p><br>
+							<p style='font-size: 27px'><b><i><u>Hit Speed:</u></i> {{unit.Hit_Speed}}</b></p>
+							<p style='font-size: 27px'><b><i><u>Speed:</u></i> {{unit.Speed}}</b></p>
+							<p style='font-size: 27px'><b><i><u>Deploy Time:</u></i> {{unit.Deploy_Time}}</b></p>
+							<p style='font-size: 27px'><b><i><u>Range:</u></i> {{unit.Hit_Speed}}</b></p>
+						</div>
+						<div class="col-lg">
+							<p style='font-size: 27px'><b><i><u>Target:</u></i> {{unit.Target}}</b></p><br>
+							<p style='font-size: 27px'><b><i><u>Count:</u></i> {{unit.Count}}</b></p>
+							<p style='font-size: 27px'><b><i><u>Transport:</u></i> {{unit.Transport}}</b></p>
+							<p style='font-size: 27px'><b><i><u>Type:</u></i> {{unit.Type}}</b></p>
+							<p style='font-size: 27px'><b><i><u>Rarity:</u></i> {{unit.Rarity}}</b></p>
+						</div>
+					</div>
+				</div>
+				<hr>
+			</div>
+		</div>
+		<div class='col-lg' style='text-align:center'>
+			<form>
+				<p style='font-size: 27px'><b><u><i>Add Unit</i></u></b></p>
+				<div class="container">
+					<div class="row">
+						<div class="col-md">
+							<div>
+								<p style='font-size: 18px;'><b><u><i><label for="unit">Unit:</label></i></u></b></p>
+								<input name="unit" #newUnit>
+              </div>
+							<br>
+							<div>
+								<p style='font-size: 18px;'><b><u><i><label for="cost">Cost:</label></i></u></b></p>
+								<input name="cost" #newCost>
+              </div>
+							<br>
+							<div>
+								<p style='font-size: 18px;'><b><u><i><label for="hitspeed">Hit Speed:</label></i></u></b></p>
+								<input name="hit_speed" #newHitSpeed>
+              </div>
+							<br>
+							<div>
+								<p style='font-size: 18px;'><b><u><i><label for="speed">Speed:</label></i></u></b></p>
+								<input name="hit_speed" #newSpeed>
+              </div>
+							<br>
+							<div>
+								<p style='font-size: 18px;'><b><u><i><label for="deploytime">Deploy Time:</label></i></u></b></p>
+								<input name="hit_speed" #newDeployTime>
+              </div>
+              <br>
+              <div>
+								<p style='font-size: 18px;'><b><u><i><label for="range">Range:</label></i></u></b></p>
+								<input name="hit_speed" #newRange>
+              </div>
+						</div>
+						<br>
+						<div class="col-md">
+							<div>
+								<p style='font-size: 18px;'><b><u><i><label for="target">Target:</label></i></u></b></p>
+								<input name="hit_speed" #newTarget>
+              </div>
+							<br>
+							<div>
+								<p style='font-size: 18px;'><b><u><i><label for="count">Count:</label></i></u></b></p>
+								<input name="hit_speed" #newCount>
+              </div>
+							<br>
+							<div>
+								<p style='font-size: 18px;'><b><u><i><label for="transport">Transport:</label></i></u></b></p>
+								<input name="hit_speed" #newTransport>
+              </div>
+							<br>
+							<div>
+								<p style='font-size: 18px;'><b><u><i><label for="type">Type:</label></i></u></b></p>
+								<input name="hit_speed" #newType>
+              </div>
+							<br>
+							<div>
+								<p style='font-size: 18px;'><b><u><i><label for="rarity">Rarity:</label></i></u></b></p>
+								<input name="hit_speed" #newRarity>
+              </div>
+							<br>
+							<br>
+							<button (click)="addUnit(b, newUnit, newCost, newHitSpeed, newSpeed, newDeployTime, newRange, newTarget, newCount, newTransport, newType, newRarity)"><b><i>Insert new unit</i></b></button>
+              <div *ngIf='b'>
+                <br>
+                <br>
+                <p style='font-size: 18px;' class="alert alert-success"><b><u><i>Unità inserita con successo.</i></u></b></p>
+              </div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
